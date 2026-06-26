@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Statut — iCowsoft</title>
+<style>
+  :root {
+    --ink:    #1a1a1a;
+    --muted:  #5e6b66;
+    --line:   #e2e6e3;
+    --bg:     #fafaf7;
+    --card:   #ffffff;
+    --online: #2e7d32;
+
+    --sw-icownect:  #1976D2;
+    --sw-icowdesk:  #37474F;
+    --sw-icowtrade: #388E3C;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  header.page {
+    padding: 48px 24px 28px;
+    text-align: center;
+    border-bottom: 1px solid var(--line);
+    background: white;
+  }
+  header.page h1 {
+    margin: 0 0 8px;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+  .global-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 4px;
+    padding: 6px 14px;
+    border-radius: 999px;
+    background: #e6f4ea;
+    color: var(--online);
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+  .global-status .pulse {
+    width: 10px; height: 10px; border-radius: 50%;
+    background: var(--online);
+    box-shadow: 0 0 0 0 rgba(46, 125, 50, 0.5);
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0%   { box-shadow: 0 0 0 0 rgba(46, 125, 50, 0.5); }
+    70%  { box-shadow: 0 0 0 10px rgba(46, 125, 50, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(46, 125, 50, 0); }
+  }
+
+  main {
+    max-width: 720px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 32px 24px 64px;
+    display: grid;
+    gap: 14px;
+    flex: 1;
+  }
+
+  .row {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--sw, var(--ink));
+    border-radius: 12px;
+    padding: 18px 22px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    color: white;
+    font-weight: 700;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+    background: var(--sw, var(--ink));
+  }
+  .row-name {
+    flex: 1;
+    min-width: 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--sw, var(--ink));
+  }
+  .row-sub {
+    font-size: 0.82rem;
+    color: var(--muted);
+    font-weight: 400;
+    display: block;
+    margin-top: 2px;
+  }
+  .status {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: #e6f4ea;
+    color: var(--online);
+    font-weight: 600;
+    font-size: 0.85rem;
+    white-space: nowrap;
+  }
+  .status .dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--online);
+  }
+
+  footer {
+    text-align: center;
+    padding: 24px;
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+
+  @media (max-width: 520px) {
+    header.page { padding: 32px 16px 20px; }
+    header.page h1 { font-size: 1.5rem; }
+    main { padding: 20px 12px 40px; }
+    .row { padding: 14px 16px; gap: 12px; }
+    .row-name { font-size: 1rem; }
+  }
+</style>
+</head>
+<body>
+
+<header class="page">
+  <h1>Statut des plateformes</h1>
+  <div class="global-status">
+    <span class="pulse"></span>
+    Tous les services sont opérationnels
+  </div>
+</header>
+
+<main>
+
+  <div class="row" style="--sw: var(--sw-icownect);">
+    <div class="badge">iCn</div>
+    <div class="row-name">
+      iCownect
+      <span class="row-sub">Plateforme de gestion de troupeau</span>
+    </div>
+    <div class="status"><span class="dot"></span>Online</div>
+  </div>
+
+  <div class="row" style="--sw: var(--sw-icowdesk);">
+    <div class="badge">iCD</div>
+    <div class="row-name">
+      iCowDesk
+      <span class="row-sub">Console multi-élevages</span>
+    </div>
+    <div class="status"><span class="dot"></span>Online</div>
+  </div>
+
+  <div class="row" style="--sw: var(--sw-icowtrade);">
+    <div class="badge">iCT</div>
+    <div class="row-name">
+      iCowTrade
+      <span class="row-sub">Marketplace de cheptel</span>
+    </div>
+    <div class="status"><span class="dot"></span>Online</div>
+  </div>
+
+</main>
+
+<footer>
+  Dernière vérification : <span id="ts"></span>
+</footer>
+
+<script>
+  document.getElementById("ts").textContent =
+    new Date().toLocaleString("fr-FR", {
+      day: "numeric", month: "long", year: "numeric",
+      hour: "2-digit", minute: "2-digit"
+    });
+</script>
+
+</body>
+</html>
