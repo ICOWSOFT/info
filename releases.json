@@ -1,92 +1,101 @@
 [
   {
     "date": "2026-06-26",
-    "category": "Nouveauté",
-    "software": "iCownect",
-    "platform": "Desktop",
+    "software": ["iCownect"],
+    "platform": ["Desktop", "Mobile"],
     "domain": "Reproduction",
-    "description": "Nouvel indicateur annuel glissant sur 365 jours, en complément du suivi 60 jours. Chaque animal est compté une seule fois, ce qui neutralise les effets de saisonnalité."
+    "libelle": "Indicateur annuel glissant 365 jours",
+    "description": "Nouvel indicateur de suivi de la reproduction sur 365 jours glissants, chaque animal compté une seule fois, neutralisant les effets de saisonnalité."
   },
   {
     "date": "2026-06-26",
-    "category": "Amélioration",
-    "software": "iCownect",
-    "platform": "Desktop",
-    "domain": "Performance",
-    "description": "Chargement du planning accéléré de 40 % sur les troupeaux de plus de 500 animaux."
+    "software": ["iCownect"],
+    "platform": ["Desktop"],
+    "domain": "Reproduction",
+    "libelle": "Correction du décalage d'insémination",
+    "description": "Décalage temporel sur les fenêtres d'insémination corrigé autour du changement d'heure."
   },
   {
     "date": "2026-06-26",
-    "category": "Correction",
-    "software": "iCownect",
-    "platform": "Mobile",
-    "domain": "Identification",
-    "description": "Affichage des animaux par nom (au lieu du numéro) désormais conservé entre sessions."
-  },
-  {
-    "date": "2026-06-12",
-    "category": "Nouveauté",
-    "software": "iCownect",
-    "platform": "Mobile",
+    "software": ["iCownect"],
+    "platform": ["Mobile"],
     "domain": "Sanitaire",
-    "description": "Saisie hors-ligne des traitements en cours, synchronisée automatiquement au retour du réseau."
+    "libelle": "Saisie hors-ligne des traitements",
+    "description": "Les traitements en cours peuvent désormais être saisis sans connexion réseau ; synchronisation automatique au retour en ligne."
   },
   {
-    "date": "2026-06-12",
-    "category": "Correction",
-    "software": "iCownect",
-    "platform": "Desktop",
-    "domain": "Reproduction",
-    "description": "Correction d'un décalage temporel sur les fenêtres d'insémination autour du changement d'heure."
+    "date": "2026-06-26",
+    "software": ["iCownect", "iCowDesk"],
+    "platform": ["Desktop", "Mobile"],
+    "domain": "Identification",
+    "libelle": "Affichage par nom d'animal persistant",
+    "description": "Le choix d'afficher les animaux par leur nom (au lieu du numéro) est désormais conservé entre les sessions et synchronisé entre les applications."
   },
 
   {
     "date": "2026-06-26",
-    "category": "Nouveauté",
-    "software": "iCowDesk",
-    "platform": "Desktop",
+    "software": ["iCowDesk"],
+    "platform": ["Desktop"],
     "domain": "Tableau de bord",
-    "description": "Nouveau widget de suivi de production laitière agrégée à l'échelle du portefeuille d'élevages."
+    "libelle": "Widget production laitière portefeuille",
+    "description": "Nouveau widget agrégeant la production laitière à l'échelle du portefeuille d'élevages, avec courbe d'évolution sur 12 mois."
   },
   {
     "date": "2026-06-26",
-    "category": "Amélioration",
-    "software": "iCowDesk",
-    "platform": "Desktop",
+    "software": ["iCowDesk"],
+    "platform": ["Desktop"],
     "domain": "Exports",
-    "description": "Export Excel des indicateurs reproduction enrichi (compatible Microsoft 365)."
-  },
-  {
-    "date": "2026-06-12",
-    "category": "Correction",
-    "software": "iCowDesk",
-    "platform": "Desktop",
-    "domain": "Authentification",
-    "description": "Correction d'un blocage occasionnel à la connexion via SSO."
+    "libelle": "Export Excel des indicateurs reproduction",
+    "description": "Export enrichi des indicateurs reproduction au format Excel, compatible Microsoft 365 et tableaux croisés dynamiques."
   },
 
   {
     "date": "2026-06-26",
-    "category": "Nouveauté",
-    "software": "iCowTrade",
-    "platform": "Desktop",
+    "software": ["iCowTrade"],
+    "platform": ["Desktop", "Mobile"],
     "domain": "Marketplace",
-    "description": "Recherche multi-critères sur les annonces de cheptel (race, lactation, statut sanitaire)."
+    "libelle": "Recherche multi-critères sur annonces",
+    "description": "Recherche d'annonces de cheptel sur critères combinés : race, niveau de lactation, statut sanitaire, géolocalisation."
   },
   {
     "date": "2026-06-26",
-    "category": "Amélioration",
-    "software": "iCowTrade",
-    "platform": "Mobile",
+    "software": ["iCowTrade"],
+    "platform": ["Mobile"],
     "domain": "Commercial",
-    "description": "Notifications push lorsqu'une offre correspond à une recherche enregistrée."
+    "libelle": "Notifications push sur recherches enregistrées",
+    "description": "Notification push immédiate dès qu'une nouvelle annonce correspond aux critères d'une recherche enregistrée."
+  },
+
+  {
+    "date": "2026-06-12",
+    "software": ["iCownect"],
+    "platform": ["Desktop"],
+    "domain": "Performance",
+    "libelle": "Chargement du planning accéléré",
+    "description": "Chargement du planning de reproduction accéléré de 40 % sur les troupeaux de plus de 500 animaux."
   },
   {
     "date": "2026-06-12",
-    "category": "Correction",
-    "software": "iCowTrade",
-    "platform": "Desktop",
+    "software": ["iCowDesk"],
+    "platform": ["Desktop"],
+    "domain": "Authentification",
+    "libelle": "Correction SSO",
+    "description": "Correction d'un blocage occasionnel à la connexion via SSO entreprise."
+  },
+  {
+    "date": "2026-06-12",
+    "software": ["iCowTrade"],
+    "platform": ["Desktop"],
     "domain": "Facturation",
-    "description": "Correction de l'arrondi appliqué sur les commissions en multi-devises."
+    "libelle": "Arrondi des commissions multi-devises",
+    "description": "Correction de l'arrondi appliqué sur les commissions facturées en multi-devises."
+  },
+  {
+    "date": "2026-06-12",
+    "software": ["iCownect", "iCowTrade"],
+    "platform": ["Desktop", "Mobile"],
+    "domain": "Identification",
+    "libelle": "Recherche d'animal unifiée",
+    "description": "Barre de recherche partagée permettant de retrouver un animal par numéro IPG, nom, ou identifiant d'annonce."
   }
 ]
