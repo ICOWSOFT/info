@@ -1,101 +1,35 @@
 [
-  {
-    "date": "2026-06-26",
-    "software": ["iCownect"],
-    "platform": ["Desktop", "Mobile"],
-    "domain": "Reproduction",
-    "libelle": "Indicateur annuel glissant 365 jours",
-    "description": "Nouvel indicateur de suivi de la reproduction sur 365 jours glissants, chaque animal compté une seule fois, neutralisant les effets de saisonnalité."
-  },
-  {
-    "date": "2026-06-26",
-    "software": ["iCownect"],
-    "platform": ["Desktop"],
-    "domain": "Reproduction",
-    "libelle": "Correction du décalage d'insémination",
-    "description": "Décalage temporel sur les fenêtres d'insémination corrigé autour du changement d'heure."
-  },
-  {
-    "date": "2026-06-26",
-    "software": ["iCownect"],
-    "platform": ["Mobile"],
-    "domain": "Sanitaire",
-    "libelle": "Saisie hors-ligne des traitements",
-    "description": "Les traitements en cours peuvent désormais être saisis sans connexion réseau ; synchronisation automatique au retour en ligne."
-  },
-  {
-    "date": "2026-06-26",
-    "software": ["iCownect", "iCowDesk"],
-    "platform": ["Desktop", "Mobile"],
-    "domain": "Identification",
-    "libelle": "Affichage par nom d'animal persistant",
-    "description": "Le choix d'afficher les animaux par leur nom (au lieu du numéro) est désormais conservé entre les sessions et synchronisé entre les applications."
-  },
-
-  {
-    "date": "2026-06-26",
-    "software": ["iCowDesk"],
-    "platform": ["Desktop"],
-    "domain": "Tableau de bord",
-    "libelle": "Widget production laitière portefeuille",
-    "description": "Nouveau widget agrégeant la production laitière à l'échelle du portefeuille d'élevages, avec courbe d'évolution sur 12 mois."
-  },
-  {
-    "date": "2026-06-26",
-    "software": ["iCowDesk"],
-    "platform": ["Desktop"],
-    "domain": "Exports",
-    "libelle": "Export Excel des indicateurs reproduction",
-    "description": "Export enrichi des indicateurs reproduction au format Excel, compatible Microsoft 365 et tableaux croisés dynamiques."
-  },
-
-  {
-    "date": "2026-06-26",
-    "software": ["iCowTrade"],
-    "platform": ["Desktop", "Mobile"],
-    "domain": "Marketplace",
-    "libelle": "Recherche multi-critères sur annonces",
-    "description": "Recherche d'annonces de cheptel sur critères combinés : race, niveau de lactation, statut sanitaire, géolocalisation."
-  },
-  {
-    "date": "2026-06-26",
-    "software": ["iCowTrade"],
-    "platform": ["Mobile"],
-    "domain": "Commercial",
-    "libelle": "Notifications push sur recherches enregistrées",
-    "description": "Notification push immédiate dès qu'une nouvelle annonce correspond aux critères d'une recherche enregistrée."
-  },
-
-  {
-    "date": "2026-06-12",
-    "software": ["iCownect"],
-    "platform": ["Desktop"],
-    "domain": "Performance",
-    "libelle": "Chargement du planning accéléré",
-    "description": "Chargement du planning de reproduction accéléré de 40 % sur les troupeaux de plus de 500 animaux."
-  },
-  {
-    "date": "2026-06-12",
-    "software": ["iCowDesk"],
-    "platform": ["Desktop"],
-    "domain": "Authentification",
-    "libelle": "Correction SSO",
-    "description": "Correction d'un blocage occasionnel à la connexion via SSO entreprise."
-  },
-  {
-    "date": "2026-06-12",
-    "software": ["iCowTrade"],
-    "platform": ["Desktop"],
-    "domain": "Facturation",
-    "libelle": "Arrondi des commissions multi-devises",
-    "description": "Correction de l'arrondi appliqué sur les commissions facturées en multi-devises."
-  },
-  {
-    "date": "2026-06-12",
-    "software": ["iCownect", "iCowTrade"],
-    "platform": ["Desktop", "Mobile"],
-    "domain": "Identification",
-    "libelle": "Recherche d'animal unifiée",
-    "description": "Barre de recherche partagée permettant de retrouver un animal par numéro IPG, nom, ou identifiant d'annonce."
-  }
+  { "date": "2026-06-01", "software": ["iCownect"], "platform": ["Desktop"], "domain": "Mouvement", "libelle": "Notifications", "description": "Amélioration de la robustesse du système. Les messages s'envoient même en cas de coupure réseau passagère, grâce à des tentatives automatiques. Ajout de la date de création des messages." },
+  { "date": "2026-06-01", "software": ["iCownect"], "platform": ["Desktop"], "domain": "Mouvement", "libelle": "Entrées", "description": "L'indicateur \"Lait ou Viande\" apparaît maintenant sur la liste des lots. Plus facile de savoir où on veut mettre l'animal." },
+  { "date": "2026-06-01", "software": ["iCownect"], "platform": ["Desktop"], "domain": "Mouvement", "libelle": "Entrées", "description": "Le système empêche maintenant de créer deux fois le même mouvement. Si l'animal est déjà au bon endroit, il utilise les informations déjà remplies pour ne rien oublier." },
+  { "date": "2026-05-04", "software": ["iCownect"], "platform": ["Desktop"], "domain": "Mouvement", "libelle": "Tâches de fond", "description": "Les vérifications automatiques ne ciblent plus les contrôles laitiers de plus d'un an, pour éviter de gaspiller de la mémoire." },
+  { "date": "2026-04-06", "software": ["iCownect"], "platform": ["Desktop"], "domain": "Mouvement", "libelle": "Equarrissage", "description": "La recherche d'animaux pour l'enlèvement au carcasse est maintenant plus précise." },
+  { "date": "2026-04-06", "software": ["iCownect"], "platform": ["Desktop"], "domain": "Mouvement", "libelle": "Entrées", "description": "Le numéro de l'animal dans sa liste (son emplacement dans le groupe) n'est plus modifié par erreur lors des entrées." },
+  { "date": "2026-03-02", "software": ["iCownect"], "platform": ["Desktop"], "domain": "Mouvement", "libelle": "Badges", "description": "Les bracelets de suivi d'activité Afimilk et Afifarm sont maintenant reconnus et correctement affichés." },
+  { "date": "2026-02-02", "software": ["iCownect"], "platform": ["Desktop"], "domain": "Mouvement", "libelle": "Suivi", "description": "Ajout d'indicateurs visuels nouveaux pour mieux comprendre pourquoi un animal est sorti de l'élevage (vente, mort, etc.)." },
+  { "date": "2026-06-01", "software": ["iCownect"], "platform": ["Desktop"], "domain": "Production", "libelle": "Laiterie et Volumes", "description": "Affichage clarifié des volumes et des contrats. La recherche d'informations est beaucoup plus rapide." },
+  { "date": "2026-05-04", "software": ["iCownect"], "platform": ["Desktop"], "domain": "Production", "libelle": "Achats et Ventes", "description": "Le système nomme et catalogue mieux les produits achetés ou vendus, et ajoute de nouvelles données pour suivre les échanges." },
+  { "date": "2026-04-06", "software": ["iCownect"], "platform": ["Desktop"], "domain": "Production", "libelle": "Prévisions", "description": "Possibilité de voir les résultats combinés de plusieurs élevages en même temps. Affichage plus clair des mois où la production est plus faible." },
+  { "date": "2026-04-06", "software": ["iCownect"], "platform": ["Desktop"], "domain": "Production", "libelle": "Achats et Ventes", "description": "Clarification des laiteries qui acceptent encore le lait. Affichage clair des ventes à zéro pour s'assurer de ne rien louper." },
+  { "date": "2026-04-06", "software": ["iCownect"], "platform": ["Desktop"], "domain": "Production", "libelle": "Valorisation", "description": "Calcul précis des délais entre les vêlages et affichage plus visible des meilleurs laits produits." },
+  { "date": "2026-04-06", "software": ["iCownect"], "platform": ["Desktop"], "domain": "Production", "libelle": "Contrôle laitier", "description": "Indication de l'origine des données comptables pour aider l'éleveur à décider quelles vaches sont rentables et quelles vaches réformer." },
+  { "date": "2026-04-06", "software": ["iCownect"], "platform": ["Desktop"], "domain": "Production", "libelle": "Croissance", "description": "Le calcul de suivi de la croissance a été revu pour être plus fiable. Si une pesée est manquante, le système garde la dernière valeur connue." },
+  { "date": "2026-03-02", "software": ["iCownect"], "platform": ["Desktop"], "domain": "Production", "libelle": "Achats et Ventes", "description": "Navigation fluide dans les différents onglets. Correction des chiffres vides qui pouvaient autrefois bloquer le système." },
+  { "date": "2026-03-02", "software": ["iCownect"], "platform": ["Desktop"], "domain": "Production", "libelle": "Laiterie", "description": "Application automatique du contrat par défaut si rien n'est précisé. Correction de l'affichage des volumes." },
+  { "date": "2026-02-02", "software": ["iCownect"], "platform": ["Desktop"], "domain": "Production", "libelle": "Laiterie", "description": "Refonte complète de la page pour la rendre plus claire. Le bouton retour et la navigation entre les vues ont été améliorés." },
+  { "date": "2026-02-02", "software": ["iCownect"], "platform": ["Desktop"], "domain": "Production", "libelle": "Prévisions", "description": "Bouton pratique pour recopier les volumes de la semaine précédente. Affichage du total du contrat lait pour comparer à la production attendue." },
+  { "date": "2026-02-02", "software": ["iCownect"], "platform": ["Desktop"], "domain": "Production", "libelle": "Achats et Ventes", "description": "Gestion simplifiée des contrats avec les laiteries et duplication des ventes en un clic." },
+  { "date": "2026-02-02", "software": ["iCownect"], "platform": ["Desktop"], "domain": "Production", "libelle": "Contrôle laitier", "description": "Correction automatique de la date de sortie lorsque les animaux ne sont plus soumis aux contrôles laitiers." },
+  { "date": "2026-01-05", "software": ["iCownect"], "platform": ["Desktop"], "domain": "Production", "libelle": "Trait lacté", "description": "Affichage des données des bracelets de suivi pour mieux comprendre les cycles de vie et le comportement des vaches." },
+  { "date": "2026-06-01", "software": ["iCownect"], "platform": ["Desktop"], "domain": "Santé", "libelle": "Mamelle", "description": "Détection automatique des conflits : si deux personnes consultent ou modifient le même document en même temps, l'éleveur en est averti." },
+  { "date": "2026-06-01", "software": ["iCownect"], "platform": ["Desktop"], "domain": "Santé", "libelle": "Bilan", "description": "Correction des résultats quand un animal est parti ou a été réformé. Simplification du calcul pour connaître la marge bénéficiaire réelle." },
+  { "date": "2026-05-04", "software": ["iCownect"], "platform": ["Desktop"], "domain": "Santé", "libelle": "Bilan", "description": "Améliorations majeures : explications visuelles, répartition des morts par mois, graphiques avec zoom, et filtrage pour ne voir que certains animaux." },
+  { "date": "2026-05-04", "software": ["iCownect"], "platform": ["Desktop"], "domain": "Santé", "libelle": "Bilan", "description": "Récupération automatique des informations du vétérinaire de l'élevage. Information sur l'âge de sevrage des veaux affichée." },
+  { "date": "2026-04-06", "software": ["iCownect"], "platform": ["Desktop"], "domain": "Santé", "libelle": "Mamelle", "description": "Correction du filtre de recherche et du calcul des tarissements pour des résultats fiables." },
+  { "date": "2026-04-06", "software": ["iCownect"], "platform": ["Desktop"], "domain": "Santé", "libelle": "Bilan", "description": "Tableau de bord amélioré et facilité pour revenir en arrière sans perdre son contexte." },
+  { "date": "2026-03-02", "software": ["iCownect"], "platform": ["Desktop"], "domain": "Santé", "libelle": "Mamelle", "description": "Calcul plus précis du nombre de cas de mammites. Lien direct vers le bilan général de santé du troupeau." },
+  { "date": "2026-03-02", "software": ["iCownect"], "platform": ["Desktop"], "domain": "Santé", "libelle": "Bilan", "description": "Suivi du coût économique des traitements ajouté. Séparation automatique des données entre les années différentes." },
+  { "date": "2026-02-02", "software": ["iCownect"], "platform": ["Desktop"], "domain": "Santé", "libelle": "Mamelle", "description": "Fusion intelligente des avertissements et des alarmes pour ne pas embêter l'éleveur avec deux alertes identiques." },
+  { "date": "2026-02-02", "software": ["iCownect"], "platform": ["Desktop"], "domain": "Santé", "libelle": "Bilan", "description": "Affichage des messages reçus de la coopérative directement dans le bilan. Filtres pour chercher rapidement des animaux spécifiques." },
+  { "date": "2026-01-05", "software": ["iCownect"], "platform": ["Desktop"], "domain": "Santé", "libelle": "Général", "description": "Affichage de l'adresse du vétérinaire pareur. Nouveaux indicateurs intégrés pour mieux suivre l'état de santé global du troupeau." }
 ]
