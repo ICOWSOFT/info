@@ -1,2 +1,2 @@
-# release
-Site des releases
+# Release
+Site des releases de la plateforme iCowsoft
