@@ -1,7 +1,365 @@
-<html>
-  <body>
-    <h1>
-      Hello world
-    </h1>
-  </body>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Notes de version — iCowsoft</title>
+<style>
+  :root {
+    --ics-green-900: #1f4d2b;
+    --ics-green-700: #2f7a47;
+    --ics-green-500: #4caf6d;
+    --ics-green-50:  #eaf5ee;
+    --ink:           #1a1a1a;
+    --muted:         #5e6b66;
+    --line:          #e2e6e3;
+    --bg:            #fafaf7;
+    --card:          #ffffff;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  header.page {
+    padding: 48px 24px 24px;
+    text-align: center;
+    border-bottom: 1px solid var(--line);
+    background: white;
+  }
+  header.page h1 {
+    margin: 0 0 8px;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+  header.page p { margin: 0; color: var(--muted); font-size: 0.95rem; }
+  .toolbar {
+    max-width: 960px;
+    margin: 16px auto 0;
+    padding: 0 24px;
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
+  .toolbar button {
+    border: 1px solid var(--line);
+    background: white;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    color: var(--ink);
+    font: inherit;
+  }
+  .toolbar button:hover { border-color: var(--ics-green-500); }
+  main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 24px 24px 64px;
+    display: grid;
+    gap: 24px;
+  }
+  .block {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .block-head {
+    padding: 18px 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    border-bottom: 1px solid var(--line);
+    background: linear-gradient(0deg, #fbfdfb, #ffffff);
+  }
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    color: white;
+    font-weight: 700;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+    background: var(--ics-green-700);
+    letter-spacing: 0.02em;
+  }
+  .block-software {
+    flex: 1;
+    min-width: 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+  .block-date {
+    font-size: 0.85rem;
+    color: var(--muted);
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+  }
+  .block-body { padding: 8px 24px 20px; }
+
+  .cat-group { margin-top: 16px; }
+  .cat-head {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0 0 10px;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    color: var(--muted);
+  }
+  .cat-dot {
+    display: inline-block;
+    width: 8px; height: 8px; border-radius: 50%;
+  }
+  .cat-nouv  .cat-dot { background: #4caf6d; }
+  .cat-ame   .cat-dot { background: #4a8cd6; }
+  .cat-cor   .cat-dot { background: #d6904a; }
+
+  ul.entries { list-style: none; padding: 0; margin: 0; display: grid; gap: 6px; }
+  ul.entries li {
+    padding: 10px 14px;
+    border-radius: 8px;
+    background: #fcfcfa;
+    border: 1px solid var(--line);
+    font-size: 0.94rem;
+    display: grid;
+    gap: 4px;
+  }
+  .entry-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    font-size: 0.78rem;
+  }
+  .pill {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 999px;
+    background: var(--ics-green-50);
+    color: var(--ics-green-900);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+  }
+  .domain { color: var(--ink); font-weight: 600; }
+  .entry-desc { color: #2a2a2a; }
+
+  .empty {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--muted);
+    font-size: 0.95rem;
+  }
+  .empty button {
+    margin-top: 12px;
+    border: 1px solid var(--ics-green-700);
+    background: var(--ics-green-700);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font: inherit;
+  }
+  footer {
+    text-align: center;
+    padding: 24px;
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+  @media (max-width: 520px) {
+    header.page { padding: 32px 16px 20px; }
+    header.page h1 { font-size: 1.5rem; }
+    main { padding: 16px 12px 40px; }
+    .block-head { padding: 14px 16px; }
+    .block-body { padding: 4px 16px 16px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="page">
+  <h1>Notes de version</h1>
+  <p>Évolutions de la suite logicielle iCowsoft</p>
+</header>
+
+<div class="toolbar">
+  <span id="status">Chargement…</span>
+  <button id="reload" type="button">Recharger</button>
+  <button id="pick" type="button">Ouvrir un JSON…</button>
+  <input id="file" type="file" accept="application/json,.json" hidden>
+</div>
+
+<main id="content"></main>
+
+<footer>Document généré · iCowsoft</footer>
+
+<script>
+  const CATEGORY_ORDER = ["Nouveauté", "Amélioration", "Correction"];
+  const CATEGORY_CLASS = {
+    "Nouveauté":   "cat-nouv",
+    "Amélioration":"cat-ame",
+    "Correction":  "cat-cor"
+  };
+  const SOFTWARE_BADGE = { "iCownect": "iCn", "iCowDesk": "iCD", "iCowTrade": "iCT" };
+
+  const $content = document.getElementById("content");
+  const $status  = document.getElementById("status");
+
+  function formatDate(iso) {
+    const d = new Date(iso + "T00:00:00");
+    return d.toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" });
+  }
+  function softwareBadge(name) {
+    return SOFTWARE_BADGE[name] || name.slice(0, 3);
+  }
+  function escapeHtml(s) {
+    return String(s).replace(/[&<>"']/g, c => ({
+      "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"
+    }[c]));
+  }
+  function groupBy(arr, keyFn) {
+    const m = new Map();
+    for (const item of arr) {
+      const k = keyFn(item);
+      if (!m.has(k)) m.set(k, []);
+      m.get(k).push(item);
+    }
+    return m;
+  }
+
+  function render(entries) {
+    $content.innerHTML = "";
+
+    if (!Array.isArray(entries) || entries.length === 0) {
+      $content.innerHTML = `<div class="empty">Aucune entrée à afficher.</div>`;
+      return;
+    }
+
+    // Regroupement principal : (logiciel, date)
+    const blocks = groupBy(entries, e => `${e.software}|${e.date}`);
+
+    // Tri : date descendante puis logiciel ascendant
+    const sortedKeys = [...blocks.keys()].sort((a, b) => {
+      const [sa, da] = a.split("|");
+      const [sb, db] = b.split("|");
+      if (da !== db) return db.localeCompare(da);
+      return sa.localeCompare(sb);
+    });
+
+    for (const key of sortedKeys) {
+      const [software, date] = key.split("|");
+      const items = blocks.get(key);
+
+      const block = document.createElement("article");
+      block.className = "block";
+
+      // En-tête : logiciel à gauche, date à droite
+      const head = document.createElement("div");
+      head.className = "block-head";
+      head.innerHTML = `
+        <div class="badge">${escapeHtml(softwareBadge(software))}</div>
+        <div class="block-software">${escapeHtml(software)}</div>
+        <div class="block-date">${formatDate(date)}</div>
+      `;
+      block.appendChild(head);
+
+      // Corps : sous-regroupement par catégorie
+      const body = document.createElement("div");
+      body.className = "block-body";
+
+      const byCat = groupBy(items, i => i.category);
+      const cats = [...byCat.keys()].sort(
+        (a, b) => CATEGORY_ORDER.indexOf(a) - CATEGORY_ORDER.indexOf(b)
+      );
+
+      for (const cat of cats) {
+        const group = document.createElement("section");
+        group.className = `cat-group ${CATEGORY_CLASS[cat] || ""}`;
+
+        const h = document.createElement("h3");
+        h.className = "cat-head";
+        h.innerHTML = `<span class="cat-dot"></span>${escapeHtml(cat)}`;
+        group.appendChild(h);
+
+        const ul = document.createElement("ul");
+        ul.className = "entries";
+
+        for (const it of byCat.get(cat)) {
+          const li = document.createElement("li");
+          li.innerHTML = `
+            <div class="entry-meta">
+              <span class="pill">${escapeHtml(it.platform || "")}</span>
+              <span class="domain">${escapeHtml(it.domain || "")}</span>
+            </div>
+            <div class="entry-desc">${escapeHtml(it.description || "")}</div>
+          `;
+          ul.appendChild(li);
+        }
+
+        group.appendChild(ul);
+        body.appendChild(group);
+      }
+
+      block.appendChild(body);
+      $content.appendChild(block);
+    }
+  }
+
+  async function loadFromUrl() {
+    $status.textContent = "Chargement…";
+    try {
+      const res = await fetch("releases.json", { cache: "no-store" });
+      if (!res.ok) throw new Error("HTTP " + res.status);
+      const data = await res.json();
+      render(data);
+      $status.textContent = `${data.length} entrée${data.length>1?"s":""} chargée${data.length>1?"s":""}`;
+    } catch (err) {
+      $status.textContent = "Impossible de charger releases.json";
+      $content.innerHTML = `
+        <div class="empty">
+          <div>Le fichier <code>releases.json</code> n'a pas pu être chargé automatiquement.</div>
+          <div style="margin-top:8px; font-size:0.85rem;">
+            Sert la page via un serveur HTTP (<code>python3 -m http.server</code>) ou ouvre le fichier manuellement&nbsp;:
+          </div>
+          <button onclick="document.getElementById('file').click()">Ouvrir un JSON…</button>
+        </div>`;
+    }
+  }
+
+  document.getElementById("reload").addEventListener("click", loadFromUrl);
+  document.getElementById("pick").addEventListener("click", () => document.getElementById("file").click());
+  document.getElementById("file").addEventListener("change", (e) => {
+    const f = e.target.files[0];
+    if (!f) return;
+    const r = new FileReader();
+    r.onload = () => {
+      try {
+        const data = JSON.parse(r.result);
+        render(data);
+        $status.textContent = `${data.length} entrée${data.length>1?"s":""} chargée${data.length>1?"s":""} depuis ${f.name}`;
+      } catch (err) {
+        $status.textContent = "JSON invalide : " + err.message;
+      }
+    };
+    r.readAsText(f);
+  });
+
+  loadFromUrl();
+</script>
+
+</body>
 </html>
