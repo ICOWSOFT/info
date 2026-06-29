@@ -1,5 +1,5 @@
 [
-  { "date": "2026-07-01", "software": ["iCownect"], "platform": ["Desktop"], "domain": "Fiche animal", "libelle": "Fiche carrière "Allaitants", "description": "Mise en ligne de la nouvelle fiche carrière dédiée aux éleveurs allaitants" },
+  { "date": "2026-07-01", "software": ["iCownect"], "platform": ["Desktop"], "domain": "Fiche animal", "libelle": "Fiche carrière Allaitants", "description": "Mise en ligne de la nouvelle fiche carrière dédiée aux éleveurs allaitants." },
   { "date": "2026-07-01", "software": ["iCownect", "iCowdesk"], "platform": ["Desktop"], "domain": "Génétique", "libelle": "Pédigree", "description": "Possibilité de consulter et de télécharger le pedigree des mâles du troupeau." },
   { "date": "2026-06-01", "software": ["iCownect"], "platform": ["Desktop"], "domain": "Mouvement", "libelle": "Notifications", "description": "Amélioration de la robustesse du système. Les messages s'envoient même en cas de coupure réseau passagère, grâce à des tentatives automatiques. Ajout de la date de création des messages." },
   { "date": "2026-06-01", "software": ["iCownect"], "platform": ["Desktop"], "domain": "Mouvement", "libelle": "Entrées", "description": "L'indicateur \"Lait ou Viande\" apparaît maintenant sur la liste des lots. Plus facile de savoir où on veut mettre l'animal." },
