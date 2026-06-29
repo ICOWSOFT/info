@@ -1,4 +1,5 @@
 [
+  { "date": "2026-07-01", "software": ["iCownect"], "platform": ["Desktop"], "domain": "Génétique", "libelle": "Pédigree", "description": "Ajout du téléchargement des pédigree des mâles." },
   { "date": "2026-06-01", "software": ["iCownect"], "platform": ["Desktop"], "domain": "Mouvement", "libelle": "Notifications", "description": "Amélioration de la robustesse du système. Les messages s'envoient même en cas de coupure réseau passagère, grâce à des tentatives automatiques. Ajout de la date de création des messages." },
   { "date": "2026-06-01", "software": ["iCownect"], "platform": ["Desktop"], "domain": "Mouvement", "libelle": "Entrées", "description": "L'indicateur \"Lait ou Viande\" apparaît maintenant sur la liste des lots. Plus facile de savoir où on veut mettre l'animal." },
   { "date": "2026-06-01", "software": ["iCownect"], "platform": ["Desktop"], "domain": "Mouvement", "libelle": "Entrées", "description": "Le système empêche maintenant de créer deux fois le même mouvement. Si l'animal est déjà au bon endroit, il utilise les informations déjà remplies pour ne rien oublier." },
