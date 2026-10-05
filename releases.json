@@ -1,4 +1,5 @@
 [
+  { "date": "2026-10-01", "software": ["iCowDesk"], "platform": ["Desktop"], "domain": "Génétique", "libelle": "Tour Troupeau", "description": "Le rapport tour troupeau est désormais imprimable par race, avec l'ajout des logos de génotypage." },
   { "date": "2026-10-01", "software": ["iCownect"], "platform": ["Desktop"], "domain": "Listes", "libelle": "Prévues réformes", "description": "La liste « Prévues réformes » est désormais imprimable et exportable." },
   { "date": "2026-10-01", "software": ["iCownect"], "platform": ["Desktop"], "domain": "Listes", "libelle": "Colonne Lot", "description": "La colonne « Lot » est désormais prise en compte dans l'export et l'impression des listes CG, Sexage et Suivi de reproduction." },
   { "date": "2026-10-01", "software": ["iCownect"], "platform": ["Desktop"], "domain": "Report", "libelle": "Colonne \"Atelier\"", "description": "La colonne « Atelier » est désormais disponible dans le rapport « Historique des mouvements de lot »." },
