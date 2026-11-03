@@ -1,4 +1,6 @@
 [
+  { "date": "2026-11-01", "software": ["iCowDesk"], "platform": ["Desktop"], "domain": "Session", "libelle": "Bouton \"Afficher les détails des animaux candidats\"", "description": "Pop-up plein écran listant les animaux candidats avec leurs historiques CAR, IA et CG, filtres race et catégorie, sélection multiple pour l'ajout à la session." },
+  { "date": "2026-11-01", "software": ["iCowDesk"], "platform": ["Desktop"], "domain": "Alimentation", "libelle": "Constats d'alimentation", "description": "Traitement des constats d'alimentation accéléré après enregistrement." },
   { "date": "2026-10-01", "software": ["iCowDesk"], "platform": ["Desktop"], "domain": "Génétique", "libelle": "Tour Troupeau", "description": "Le rapport tour troupeau est désormais imprimable par race, avec l'ajout des logos de génotypage." },
   { "date": "2026-10-01", "software": ["iCownect"], "platform": ["Desktop"], "domain": "Listes", "libelle": "Prévues réformes", "description": "La liste « Prévues réformes » est désormais imprimable et exportable." },
   { "date": "2026-10-01", "software": ["iCownect"], "platform": ["Desktop"], "domain": "Listes", "libelle": "Colonne Lot", "description": "La colonne « Lot » est désormais prise en compte dans l'export et l'impression des listes CG, Sexage et Suivi de reproduction." },
